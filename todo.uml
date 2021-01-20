@@ -1,0 +1,63 @@
+@startuml
+page 2x2
+
+package Tables {
+
+	class Todo {
+		text: content
+		varchar255: title
+		state: state
+		datetime: created
+		datetime: updated
+	}
+
+	class Todolist {
+		varchar255: title
+		text: description
+		datetime: created
+		datetime: updated
+	}
+
+	class User {
+		varchar255: firstname
+		varchar255: lastname
+		mail: mail
+		datetime: created
+		datetime: updated
+	}
+}
+
+package Relations {
+
+	class TodoTodolistRelation {
+		todo: todo
+		todolist: todolist
+		datetime: created
+		datetime: updated
+	}
+
+
+	class TodoUserRelation {
+		todo: todo
+		user: user
+		datetime: created
+		datetime: updated
+	}
+
+	class TodolistUserRelation {
+		todolist: todolist
+		user: user
+		datetime: created
+		datetime: updated
+	}
+
+}
+
+Todolist <- TodoTodolistRelation
+Todo <- TodoTodolistRelation
+Todo <- TodoUserRelation
+User <- TodoUserRelation
+Todolist <- TodolistUserRelation
+User <- TodolistUserRelation
+
+@enduml

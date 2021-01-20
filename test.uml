@@ -1,0 +1,19 @@
+
+     ┌────┐          ┌─────────┐          ┌──────────┐          ┌──┐
+     │Marc│          │Partensky│          │Incroyable│          │Ça│
+     └─┬──┘          └────┬────┘          └────┬─────┘          └┬─┘
+       │      Bidule      │                    │                 │
+       │ ────────────────>│                    │                 │
+       │                  │                    │                 │
+       │                  │                    │      machin     │
+       │                  │                    │ ────────────────>
+     ┌─┴──┐          ┌────┴────┐          ┌────┴─────┐          ┌┴─┐
+     │Marc│          │Partensky│          │Incroyable│          │Ça│
+     └────┘          └─────────┘          └──────────┘          └──┘
+
+@startuml
+
+Marc -> Partensky : Bidule
+Incroyable -> Ça : machin
+
+@enduml
